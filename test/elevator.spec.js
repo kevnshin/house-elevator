@@ -45,7 +45,7 @@ describe('An Elevator in a Home', function () {
       expect(ride).to.not.be.a('string');
     });
   });
-/*
+
   describe('should not move', function () {
     describe('if given a wrong floor number', function () {
       it('first floor to fifth floor', function () {
@@ -100,5 +100,5 @@ describe('An Elevator in a Home', function () {
     });
 
   });
-*/
+
 });
