@@ -7,44 +7,26 @@ module.exports = {
 
     var amtFloors = 0;
 
-/*
-    //if either is not a number
-    if((isNaN(currentFloor))||(isNaN(targetFloor))){
-
-        return 0;
-
-    }
-
-    //if it's an array
-    else if((currentFloor instanceof Array)||(targetFloor instanceof Array)){
-      return 0;
-
-    }*/
-
-
-    //if they are numbers
-    if((currentFloor instanceof Number)||(targetFloor instanceof Number)){
-
-      if((currentFloor>3)||(currentFloor<0)||(targetFloor>3)||targetFloor<0)
-      {
-        return 0;
-
-      }
     
+
+
+    if((typeof currentFloor === 'number')&&(typeof targetFloor === 'string')){
+
+      
+      targetFloor = Number(targetFloor);
+
+
       amtFloors = targetFloor-currentFloor;
+
+      if(currentFloor>3||currentFloor<0||targetFloor>3||targetFloor<0){
+        return 0;
+      }
 
       return amtFloors;
 
-    }
-
-
-    else{
+    }else{//Current floor not a number & target floor not a String
       return 0;
-    }    
-
-
-
-
+    }
 
   } //ends goto function
 
